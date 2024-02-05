@@ -374,7 +374,7 @@ async def extractSubtitles(path_to_file, user_id):
     subtitles = []
     for stream in videoStreamsData.get("streams"):
         try:
-            if stream["codec_type"] == "subtitle":
+            if stream["codec_type"] == "video":
                 subtitles.append(stream)
         except Exception as e:
             LOGGER.warning(e)
